@@ -13,6 +13,9 @@
     .nav-inner { max-width:var(--max); margin:0 auto; min-height:72px; padding:0 24px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
     .brand { font-family: Bahnschrift, "Segoe UI", Arial, sans-serif; font-size:30px; font-weight:900; letter-spacing:.5px; text-transform:uppercase; }
     .brand span { color:var(--yellow); }
+    .brand.logo-brand { display:inline-flex; align-items:center; text-decoration:none; }
+    .brand.logo-brand img { width:170px; height:62px; object-fit:contain; object-position:left center; display:block; }
+    @media (max-width:760px) { .brand.logo-brand img { width:132px; height:52px; } }
     .back { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:12px 18px; background:var(--yellow); color:#111; font-size:13px; font-weight:900; text-transform:uppercase; }
     main { padding:76px 24px; }
     .wrap { max-width:var(--max); margin:0 auto; display:grid; grid-template-columns:.78fr 1.22fr; gap:46px; align-items:start; }
@@ -32,7 +35,7 @@
 <body>
   <nav class="nav">
     <div class="nav-inner">
-      <a class="brand" href="index.html"><span>F&B</span> Spezialbau</a>
+      <a class="brand logo-brand" href="index.html" aria-label="F&B Spezialbau Startseite"><img src="fb-logo-transparent.png" alt="F&B Spezialbau"></a>
       <a class="back" href="index.html#referenzen">Zurück</a>
     </div>
   </nav>
