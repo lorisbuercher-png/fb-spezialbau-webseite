@@ -652,7 +652,11 @@
             <div class="contact-item"><div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m4 4 16 0 0 16-16 0z"/><path d="m22 6-10 7L2 6"/></svg></div><div><strong>E-Mail</strong>info@fb-spezialbau.ch</div></div>
           </div>
         </div>
-        <form class="form" id="quoteForm">
+        <form class="form" id="quoteForm" action="https://formsubmit.co/info@fb-spezialbau.ch" method="POST">
+          <input type="hidden" name="_subject" value="Neue Offertanfrage über die Webseite">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="true">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
           <h3>Offerte anfordern</h3>
           <div class="form-row">
             <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div>
@@ -706,20 +710,6 @@
         navLinks.classList.remove('open');
         menuButton.setAttribute('aria-expanded', 'false');
       });
-    });
-    document.querySelector('#quoteForm').addEventListener('submit', (event) => {
-      event.preventDefault();
-      const form = event.currentTarget;
-      let note = document.querySelector('#formNote');
-      if (!note) {
-        note = document.createElement('p');
-        note.id = 'formNote';
-        note.style.marginTop = '14px';
-        note.style.fontWeight = '700';
-        note.style.color = '#1d1f22';
-        form.appendChild(note);
-      }
-      note.textContent = 'Danke für Ihre Anfrage. Wir prüfen Ihre Angaben und melden uns persönlich bei Ihnen.';
     });
   </script>
 
