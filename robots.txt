@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lorisbuercher-png.github.io/fb-spezialbau-webseite/sitemap.xml
