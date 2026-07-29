@@ -94,7 +94,7 @@
     .experience{background:#f4f5f5;border:0;border-left:4px solid #f5bd00;min-height:160px}
     .experience strong{color:#202326}
     .experience p{color:#5b6266}
-    #referenzen{background:#f4f5f5}
+    #referenzen{background:#fff}
     .references-coming{border-color:#d9dddf}
     .coming-label{color:#755700}
     .contact-section{background:#f3f5f5;color:#202326;padding:78px 0;border-bottom:1px solid #dfe2e3}
@@ -190,12 +190,138 @@
     #ueber-uns .about-photo{display:none}
     #ueber-uns .about-content{max-width:1180px;width:calc(100% - 48px);margin:0 auto;padding:58px clamp(28px,5vw,70px)}
     @media(max-width:620px){#ueber-uns .about-content{width:calc(100% - 28px);padding:38px 24px}}
+
+    /* Konsolidierte responsive Darstellung */
+    html,body{max-width:100%;overflow-x:hidden}
+    img,svg{max-width:100%}
+    .field,.form-row>*{min-width:0}
+
+    @media(max-width:760px){
+      .wrap{width:calc(100% - 32px)}
+      section{padding:48px 0}
+
+      .topbar{display:none}
+      .nav{position:relative}
+      .nav .wrap{min-height:0;padding:12px 0 14px;display:flex;flex-direction:column;align-items:center;gap:12px}
+      .nav .brand.logo-brand{width:100%;min-width:0;justify-content:center}
+      .nav .brand.logo-brand img{width:158px;height:48px;object-fit:contain}
+      .menu{width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px 7px;overflow:visible;background:transparent;font-size:10px}
+      .menu a{min-height:34px;padding:7px 4px!important;display:flex;align-items:center;justify-content:center;text-align:center;white-space:normal;border:1px solid rgba(255,255,255,.12);line-height:1.2}
+      .menu a:last-child{grid-column:1/-1;min-height:38px;background:#f5bd00;color:#151719;border:0}
+
+      .hero{min-height:0;background:linear-gradient(180deg,rgba(255,255,255,.88) 0%,rgba(255,255,255,.80) 56%,rgba(255,255,255,.42) 100%),url("schadstoff-hero-sanierung.png") 64% center/cover no-repeat}
+      .hero .wrap{padding:44px 0 34px}
+      .hero h1{max-width:100%;margin-bottom:16px;font-size:clamp(32px,9vw,42px);line-height:1.06}
+      .hero p{max-width:100%;margin-bottom:22px;font-size:15px;line-height:1.55}
+      .actions{margin-bottom:28px;gap:10px}
+      .actions .btn{width:100%;min-height:46px;padding:0 18px;font-size:12px}
+      .trust{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important;padding:16px!important}
+      .trust-item{grid-template-columns:30px minmax(0,1fr)!important;gap:8px!important}
+      .trust-icon{width:30px!important;height:30px!important}
+      .trust-item strong{font-size:10px!important}
+      .trust-item small{font-size:10px!important;line-height:1.3}
+
+      .section-head,.services-heading{align-items:flex-start!important;flex-direction:column;gap:14px}
+      .section-head h2{font-size:clamp(27px,8vw,34px);line-height:1.12}
+      #leistungen .service-grid{grid-template-columns:1fr;gap:14px}
+      #leistungen .service-card{min-height:0;padding:26px 20px 20px}
+      #leistungen .service-card svg{width:42px;height:42px;margin-bottom:12px}
+
+      .facts-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;padding:0}
+      .fact{min-height:132px;padding:24px 12px;border-top:1px solid rgba(255,255,255,.19)}
+      .fact strong{font-size:32px}
+      .fact span{max-width:150px;font-size:10px}
+
+      #ueber-uns.about{padding-top:34px}
+      #ueber-uns .about-grid{display:block}
+      #ueber-uns .about-content{width:calc(100% - 32px);padding:34px 22px;display:flex;flex-direction:column;align-items:stretch;gap:24px}
+      #ueber-uns .about-content h2{font-size:clamp(27px,8vw,34px)}
+      #ueber-uns .about-content p{font-size:15px}
+      #ueber-uns .experience{width:100%;min-height:0;padding:22px}
+      #ueber-uns .btn{width:100%}
+
+      .references-coming{grid-template-columns:1fr;gap:18px;padding:26px 0}
+      .references-coming h2{font-size:clamp(26px,8vw,34px)}
+      .coming-label{justify-self:start}
+
+      .contact-section{padding:50px 0}
+      .contact-head{margin-bottom:22px;text-align:left}
+      .contact-head h2{font-size:clamp(28px,8vw,34px)}
+      .contact-head p{font-size:15px}
+      .contact-form{padding:22px 18px}
+      .form-row{grid-template-columns:1fr;gap:0}
+      .field input,.field select,.field textarea{min-height:46px;font-size:16px}
+      .field textarea{min-height:130px}
+      .contact-form .btn{width:100%;min-height:48px}
+
+      .reference-footer{padding-top:42px}
+      .footer-main{grid-template-columns:1fr}
+      .footer-main>div{min-height:0;padding:25px 0!important;border-left:0;border-top:1px solid #303437}
+      .footer-main>div:first-child{border-top:0}
+      .footer-cta h2{font-size:28px}
+      .footer-cta .btn{width:100%}
+      .footer-map{width:min(230px,100%);height:auto}
+      .recognition-logos{justify-content:flex-start;flex-wrap:wrap}
+      .reference-footer .bottom{align-items:flex-start;flex-direction:column;gap:12px}
+    }
+
+    @media(max-width:380px){
+      .wrap{width:calc(100% - 24px)}
+      .menu{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .menu a:last-child{grid-column:1/-1}
+      .hero h1{font-size:30px}
+      .trust{grid-template-columns:1fr!important}
+      .facts-grid{grid-template-columns:1fr!important}
+      .fact{min-height:112px}
+      #ueber-uns .about-content{width:calc(100% - 24px);padding:30px 18px}
+      .contact-form{padding:20px 14px}
+    }
+    /* Aufklappbare Handynavigation */
+    .menu-toggle{display:none}
+    @media(max-width:760px){
+      .menu-toggle{width:100%;min-height:46px;padding:0 16px;display:flex;align-items:center;justify-content:center;gap:11px;border:1px solid rgba(255,255,255,.28);background:#1a1d1f;color:#fff;font:inherit;font-size:12px;font-weight:800;text-transform:uppercase;cursor:pointer}
+      .menu-toggle:hover,.menu-toggle:focus-visible{border-color:#f5bd00;outline:none}
+      .menu-toggle-icon{width:20px;display:grid;gap:4px}
+      .menu-toggle-icon i{display:block;width:100%;height:2px;background:#f5bd00;transition:transform .22s ease,opacity .22s ease}
+      .menu-toggle b{margin-left:2px;color:#f5bd00;font-size:18px;line-height:1;transition:transform .22s ease}
+      .menu-toggle[aria-expanded="true"] .menu-toggle-icon i:nth-child(1){transform:translateY(6px) rotate(45deg)}
+      .menu-toggle[aria-expanded="true"] .menu-toggle-icon i:nth-child(2){opacity:0}
+      .menu-toggle[aria-expanded="true"] .menu-toggle-icon i:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+      .menu-toggle[aria-expanded="true"] b{transform:rotate(180deg)}
+      .nav .menu{display:none}
+      .nav .menu.is-open{display:grid;animation:menuReveal .2s ease-out}
+    }
+    @keyframes menuReveal{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+    @media(prefers-reduced-motion:reduce){.nav .menu.is-open{animation:none}.menu-toggle-icon i,.menu-toggle b{transition:none}}
+    /* Kompaktes mobiles Menue oben rechts */
+    @media(max-width:760px){
+      .nav .wrap{display:grid;grid-template-columns:minmax(0,1fr) 42px;align-items:center;gap:12px;padding:10px 0}
+      .nav .brand.logo-brand{width:auto;justify-content:flex-start}
+      .nav .brand.logo-brand img{width:145px;height:44px}
+      .menu-toggle{width:42px;min-height:42px;height:42px;padding:0;justify-self:end;border-color:rgba(255,255,255,.24);background:#171a1c}
+      .menu-toggle-icon{width:19px}
+      .nav .menu,.nav .menu.is-open{grid-column:1/-1;width:100%;margin-top:2px}
+      .nav .menu.is-open{display:flex;flex-direction:column;gap:5px}
+      .nav .menu a,.nav .menu a:last-child{width:100%;min-height:39px;padding:8px 13px!important;justify-content:flex-start;text-align:left;border:1px solid rgba(255,255,255,.14);background:#171a1c;color:#fff;font-size:10px}
+      .nav .menu a.active{border-color:#f5bd00;color:#f5bd00}
+      .nav .menu a:last-child{background:#f5bd00;color:#151719;border-color:#f5bd00}
+    }
+    /* Kompakter Footer auf Mobilgeraeten */
+    @media(max-width:760px){
+      .footer-coverage .footer-map{width:165px;max-width:72vw;height:auto;margin-top:8px}
+      .footer-recognition .recognition-logos{gap:18px;margin-bottom:14px}
+      .footer-recognition .recognition-item{min-width:68px;gap:5px;justify-items:start}
+      .footer-recognition .recognition-item.suva-logo img{width:72px;height:27px;margin:0;object-fit:contain}
+      .footer-recognition .ekas-mark strong{height:27px;font-size:19px}
+      .footer-recognition .recognition-item small{font-size:8px}
+      .footer-recognition .group-link{font-size:10px}
+    }
 </style>
 </head>
 <body>
   <header>
     <div class="topbar"><div class="wrap"><span><b class="gold">●</b> Schweizweit im Einsatz</span><span><b class="gold">✓</b> SUVA-anerkannte Schadstoffsanierungen</span><span><b class="gold">✉</b> l.b@bb-schadstoffsanierung.ch</span></div></div>
-    <nav class="nav"><div class="wrap"><a class="brand logo-brand" href="#start" aria-label="B&B Schadstoffsanierung Startseite"><img src="bb-logo-white-footer.png" alt="B&B Schadstoffsanierung"></a><div class="menu"><a class="active" href="#start">Startseite</a><a href="#leistungen">Leistungen</a><a href="#ueber-uns">Über uns</a><a href="#referenzen">Referenzen</a><a href="#kontakt">Kontakt</a><a href="index.html">F&B Spezialbau</a></div></div></nav>
+    <nav class="nav"><div class="wrap"><a class="brand logo-brand" href="#start" aria-label="B&B Schadstoffsanierung Startseite"><img src="bb-logo-white-footer.png" alt="B&B Schadstoffsanierung"></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Navigation oeffnen" title="Navigation oeffnen"><span class="menu-toggle-icon" aria-hidden="true"><i></i><i></i><i></i></span></button><div class="menu" id="main-menu"><a class="active" href="#start">Startseite</a><a href="#leistungen">Leistungen</a><a href="#ueber-uns">Über uns</a><a href="#referenzen">Referenzen</a><a href="#kontakt">Kontakt</a><a href="index.html">F&B Spezialbau</a></div></div></nav>
   </header>
   <main id="start">
     <section class="hero"><div class="wrap"><h1>Wir sanieren Schadstoffe. <span>Sicher und fachgerecht.</span></h1><p>Ihr Fachbetrieb für Schadstoffsanierungen in Gebäuden und Anlagen. Schweizweit im Einsatz, sorgfältig geplant und nach geltenden Vorgaben ausgeführt.</p><div class="actions"><a class="btn btn-yellow" href="#kontakt">Kostenlose Offertanfrage →</a><a class="btn btn-ghost" href="#ueber-uns">Mehr über uns →</a></div><div class="trust">
@@ -230,10 +356,10 @@
     </div></section>
     <section class="facts-band" aria-label="Kennzahlen und Qualitätsmerkmale">
       <div class="wrap facts-grid">
-        <div class="fact"><strong>4</strong><span>Spezialisierte Sanierungsbereiche</span></div>
-        <div class="fact"><strong>10+</strong><span>Jahre Erfahrung im Umgang mit Schadstoffen</span></div>
-        <div class="fact"><strong>24H</strong><span>Reaktionszeit schweizweit</span></div>
-        <div class="fact"><strong>100%</strong><span>Einsatz für Sicherheit und Qualität</span></div>
+        <div class="fact"><strong class="counter" data-target="4">4</strong><span>Spezialisierte Sanierungsbereiche</span></div>
+        <div class="fact"><strong class="counter" data-target="10" data-suffix="+">10+</strong><span>Jahre Erfahrung im Umgang mit Schadstoffen</span></div>
+        <div class="fact"><strong class="counter" data-target="24" data-suffix="H">24H</strong><span>Reaktionszeit schweizweit</span></div>
+        <div class="fact"><strong class="counter" data-target="100" data-suffix="%">100%</strong><span>Einsatz für Sicherheit und Qualität</span></div>
       </div>
     </section>    <section id="ueber-uns" class="about"><div class="about-grid"><div class="about-photo"></div><div class="about-content"><div><span class="eyebrow">Über uns</span><h2>Verantwortung, die man sehen kann.</h2><p>B&B Schadstoffsanierung ist auf den professionellen Umgang mit belasteten Baustoffen spezialisiert. Wir arbeiten für Privatkunden, Verwaltungen, Gewerbe und Industrie in der ganzen Schweiz.</p><ul class="checks"><li>SUVA-anerkannte Schadstoffsanierungen</li><li>Geschultes Personal und geeignete Technik</li><li>Sorgfältige Planung und klare Ausführung</li><li>Nachvollziehbare Dokumentation der Arbeiten</li></ul><a class="btn btn-yellow" href="#kontakt">Mehr erfahren →</a></div><div class="experience"><div><strong>Fachgerechte Sanierungen</strong><p>Asbest, PCB, PAK und KMF werden je nach Objekt und Material sorgfältig saniert.</p></div></div></div></div></section>
     <section id="referenzen"><div class="wrap"><span class="eyebrow">Referenzen</span><div class="references-coming"><div><h2>Referenzprojekte folgen</h2><p>Aktuelle Einblicke in ausgeführte Schadstoffsanierungen werden hier laufend ergänzt.</p></div><span class="coming-label">In Vorbereitung</span></div></div></section>
@@ -272,7 +398,70 @@
       <div class="bottom"><span>© 2026 B&B Schadstoffsanierung. Alle Rechte vorbehalten.</span><span>Impressum · Datenschutz</span></div>
     </div>
   </footer>
-</body>
+  <script>
+    (() => {
+      const counters = document.querySelectorAll(".counter[data-target]");
+      if (!counters.length || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+      const animateCounter = (counter) => {
+        const target = Number(counter.dataset.target);
+        const suffix = counter.dataset.suffix || "";
+        const duration = 1400;
+        const start = performance.now();
+
+        const update = (now) => {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          counter.textContent = Math.round(target * eased) + suffix;
+          if (progress < 1) requestAnimationFrame(update);
+        };
+
+        counter.textContent = "0" + suffix;
+        requestAnimationFrame(update);
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.45 });
+
+      counters.forEach((counter) => observer.observe(counter));
+    })();
+  </script>  <script>
+    (() => {
+      const toggle = document.querySelector(".menu-toggle");
+      const menu = document.querySelector("#main-menu");
+      if (!toggle || !menu) return;
+
+      const closeMenu = () => {
+        menu.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.title = "Navigation oeffnen";
+      };
+
+      toggle.addEventListener("click", () => {
+        const willOpen = !menu.classList.contains("is-open");
+        menu.classList.toggle("is-open", willOpen);
+        toggle.setAttribute("aria-expanded", String(willOpen));
+        toggle.title = willOpen ? "Navigation schliessen" : "Navigation oeffnen";
+      });
+
+      menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeMenu();
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 760) closeMenu();
+      });
+    })();
+  </script></body>
 </html>
 
 
