@@ -316,6 +316,16 @@
       .footer-recognition .recognition-item small{font-size:8px}
       .footer-recognition .group-link{font-size:10px}
     }
+
+    /* Robuste getrennte Ebenen fuer das Hero-Bild */
+    .hero{position:relative;isolation:isolate;overflow:hidden;background:#eef0f0!important}
+    .hero::before{content:"";position:absolute;inset:0;z-index:0;background:url("schadstoff-hero-sanierung.png") center/cover no-repeat}
+    .hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.92) 30%,rgba(255,255,255,.48) 51%,rgba(255,255,255,.06) 72%)}
+    .hero>.wrap{position:relative;z-index:2}
+    @media(max-width:760px){
+      .hero::before{background-position:64% center}
+      .hero::after{background:linear-gradient(180deg,rgba(255,255,255,.88) 0%,rgba(255,255,255,.78) 56%,rgba(255,255,255,.40) 100%)}
+    }
 </style>
 </head>
 <body>
